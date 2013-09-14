@@ -1,5 +1,5 @@
 define(["jquery"], // Require jquery
-       function($){
+			 function($){
 /**
  * AJAX File Upload
  * http://github.com/davgothic/AjaxFileUpload
@@ -77,12 +77,9 @@ define(["jquery"], // Require jquery
 			function onComplete (e) {
 				var $iframe  = $(e.target),
 					doc      = ($iframe[0].contentWindow || $iframe[0].contentDocument).document,
-					response = doc.body.innerHTML;
-	
-				if(doc.body.getElementsByTagName("pre").length > 0){
-		                    response = $.parseJSON(doc.body.firstChild.innerHTML);
-		                } else if (response) {
-					response = $.parseJSON(response);
+					response = (doc.body.firstChild?doc.body.firstChild:doc.body).innerHTML;
+				if(response){
+					response = JSON.parse(response);
 				} else {
 					response = {};
 				}
