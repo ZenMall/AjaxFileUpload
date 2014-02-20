@@ -12,6 +12,7 @@ define(["jquery"], // Require jquery
  */
 	
 	;(function($) {
+		var id_generator = 0;
 		$.fn.AjaxFileUpload = function(options) {
 			
 			var defaults = {
@@ -21,12 +22,9 @@ define(["jquery"], // Require jquery
 				onComplete: function(filename, response) {}
 			},
 			settings = $.extend({}, defaults, options),
-			randomId = (function() {
-				var id = 0;
-				return function () {
-					return "_AjaxFileUpload" + id++;
-				};
-			})();
+			randomId = function () {
+				return "_AjaxFileUpload" + (id_generator++);
+			};
 			
 			return this.each(function() {
 				var $this = $(this);
