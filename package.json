@@ -1,19 +1,5 @@
 {
   "name": "ajaxfileupload",
   "version": "1.0.0",
-  "description": "AJAX File Upload is a jQuery plugin to enable cross-browser AJAX-like file uploads",
-  "main": "jquery.ajaxfileupload.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZenMall/AjaxFileUpload.git"
-  },
-  "author": "Oleg Lebedev",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ZenMall/AjaxFileUpload/issues"
-  },
-  "homepage": "https://github.com/ZenMall/AjaxFileUpload#readme"
+  "license": "MIT"
 }
